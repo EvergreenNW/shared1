@@ -3,19 +3,31 @@
 
 <head>
     <meta charset="utf-8">
-    <title>starter code</title>
+    <title>Project1</title>
 <link rel="stylesheet" type="text/css" href="site.css">
 </head>
 
 <body>
-<h2>starter project</h2>
 
-<button type="button" id="button1">Button</button>
+<form>
+    <fieldset>
+        <legend>Track Your Calories</legend>
+        <label for="foodName">What did you eat today?</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="calories">Number of calories</label>
+        <input type="text" id="numCalories" name="numCalories"><br>
+        <button type="button" id="getResult">Submit</button>
+    </fieldset>
+  </form>
+
 <div>
     <br />
-    <input type="text" val="starting value" text="hello" id="textbox1" />
+    <label for="totalCalories">Total Calories</label>
+    <input type="text" id="totalCal">
     <br />
 </div>
+
+<div id = "output"></div>
 
 <script src="main.js"></script>
 </body>

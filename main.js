@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         let food3 = new Food (document.getElementById("fname").value, document.getElementById("numCalories").value);          
         document.getElementById("fname").value = "";
         document.getElementById("numCalories").value = "";
-        console.log(food3);
+        console.log(Food);
     });
 });
 

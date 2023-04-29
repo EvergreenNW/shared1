@@ -15,28 +15,35 @@
 //     });
 // });
 document.getElementById("fname").focus();
-document.getElementById("fname").select();
+
+FoodArray = [];
+let food1 = {
+    name: "apple",
+    calories: 54
+}
+
+let food2 = {
+    name: "Noodle soup",
+    calories: 250
+}
+
+FoodArray.push(food1, food2);
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
     document.getElementById("getResult").addEventListener("click", function() {
-
-        FoodArray = [];
 
         let Food = function (pName, pCalories) {
             this.name = pName;
             this.calories = parseInt(pCalories);
         }
                 
-        let food1 = new Food ("apple", 54);
-        let food2 = new Food ("Noodle soup", 325);
-
         let food = new Food (document.getElementById("fname").value, document.getElementById("numCalories").value);
                 
         document.getElementById("fname").value = "";
         document.getElementById("numCalories").value = "";
 
-        FoodArray.push(food1, food2, food3);
+        FoodArray.push(food);
         console.log(FoodArray);
     });
 });

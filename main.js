@@ -14,23 +14,30 @@
 //         console.log(foodArray);
 //     });
 // });
+document.getElementById("fname").focus();
+document.getElementById("fname").select();
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
     document.getElementById("getResult").addEventListener("click", function() {
 
+        FoodArray = [];
+
         let Food = function (pName, pCalories) {
             this.name = pName;
-            this.calories = pCalories;
+            this.calories = parseInt(pCalories);
         }
                 
         let food1 = new Food ("apple", 54);
         let food2 = new Food ("Noodle soup", 325);
 
-        let food3 = new Food (document.getElementById("fname").value, document.getElementById("numCalories").value);          
+        let food = new Food (document.getElementById("fname").value, document.getElementById("numCalories").value);
+                
         document.getElementById("fname").value = "";
         document.getElementById("numCalories").value = "";
-        console.log(Food);
+
+        FoodArray.push(food1, food2, food3);
+        console.log(FoodArray);
     });
 });
 

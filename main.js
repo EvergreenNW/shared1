@@ -45,6 +45,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         FoodArray.push(food);
         console.log(FoodArray);
+
+        // Here's me trying to calculate the total calories
+
+        let getTotalCals = function () {
+            let total = 0;
+      
+            for (let i = 0; i < FoodArray.calories; i++) {
+              total += FoodArray[i];
+            
+            return total;
+            }
+            
+            getTotalCals();
+            console.log(total);
+        }
+
+        // but for some reason I can't get it out to console.log
+        // I feel like I am missing something but can't figure it out
+       
     });
 });
 

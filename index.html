@@ -10,13 +10,27 @@
 <body>
 
 <form>
-    <fieldset>
+    <fieldset id = "wrapper">
         <legend>Track Your Calories</legend>
-        <label for="foodName">What did you eat today?</label>
+        <label for="foodName" id = "label1">What did you eat today?</label>
         <input type="text" id="fname" name="fname"><br><br>
-        <label for="calories">Number of calories</label>
+        <label for="calories" id = "label2">Number of calories</label>
         <input type="text" id="numCalories" name="numCalories"><br><br>
         <button type="button" id="getResult">Submit</button>
+        <table id = "tableResult">
+            <tr>
+              <th>Food</th>
+              <th>Calories</th>
+            </tr>
+            <tr>
+              <td id = "food1"></td>
+              <td id = "cal1"></td>
+            </tr>
+            <tr>
+              <td id = "food2"></td>
+              <td id = "cal2"></td>
+            </tr>
+          </table>
     </fieldset>
   </form>
 

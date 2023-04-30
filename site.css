@@ -18,7 +18,9 @@ legend {
     font-size: 30px;
 }
 
-fieldset {
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background-color: #eeeeee;
     border: solid 2px blue;  
     float: center;
@@ -26,15 +28,47 @@ fieldset {
     padding: 28px 35px;
 }
 
+#label1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#fname {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#label2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#numCalories {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
 #getResult {
-    border: 2px solid black;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 2px solid #2196F3;
     background-color: white;
-    color: black;
     padding: 14px 28px;
-    font-size: 26px;
+    font-size: 20px;
     cursor: pointer;
-    border-color: #2196F3;
     color: dodgerblue;
+    width: 150px;
+    height: 60px;
     margin-left: 30px;
   }
 
@@ -57,4 +91,18 @@ fieldset {
     height: 25px;
     margin: 5px 0px;
     border-radius: 4px;
+}
+
+table, th, td {
+    border: 1px solid rgb(8, 42, 238);
+    text-align: center;
+  }
+
+#tableResult {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    border-collapse: collapse;
+    font-size: 12px;
 }

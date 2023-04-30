@@ -1,19 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function (event) {
-
-//     document.getElementById("getResult").addEventListener("click", function() {
-        
-//         foodArray = [];
-//         let Food = {
-//             name: document.getElementById("fname").value,
-//             calories: document.getElementById("numCalories").value
-//         }
-//         document.getElementById("fname").value = "";
-//         document.getElementById("numCalories").value = "";
-
-//         foodArray.push(Food);
-//         console.log(foodArray);
-//     });
-// });
 document.getElementById("fname").focus();
 
 FoodArray = [];
@@ -46,23 +30,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         FoodArray.push(food);
         console.log(FoodArray);
 
-        // Here's me trying to calculate the total calories
+        // I fixed it a little bit.
 
-        let getTotalCals = function () {
-            let total = 0;
-      
-            for (let i = 0; i < FoodArray.calories; i++) {
-              total += FoodArray[i];
-            
-            return total;
-            }
-            
-            getTotalCals();
-            console.log(total);
+        let total = 0;
+        for (let i = 0; i < FoodArray.length; i++) {
+            total += FoodArray[i].calories;
         }
-
-        // but for some reason I can't get it out to console.log
-        // I feel like I am missing something but can't figure it out
+        document.getElementById("totalCal").value = total;
+        console.log(total);
        
     });
 });
